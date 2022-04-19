@@ -1,30 +1,31 @@
 #ifndef MAIN_H
 #define MAIN_H
 #include <stdarg.h>
-/* Main printf function */
-int _printf(const char *format, ...);
 
-/* Helper Functions */
-int _putchar(char);
-int print_conversion_element(char, va_list);
-int print_char(va_list);
-int print_str(va_list);
-int print_unsigned(va_list);
-int print_oct(va_list);
-int print_hex(va_list);
-int print_HEX(va_list);
-int print_hex_base(va_list arg, char _case);
+int _putchar(char c);
+int print_int(va_list arg);
+int print_unsigned(va_list arg);
+int _printf(const char *format, ...);
+int print_char(va_list arg);
+int print_str(va_list arg);
+int print_percent(void);
+void print_binary(unsigned int n, unsigned int *printed);
+int print_unsignedToBinary(va_list arg);
+int print_oct(va_list arg);
 int print_unsignedIntToHex(unsigned int num, char _case);
-/* Struct to use to pair conversion specifiers to respective functions*/
+int print_hex_base(va_list arg, char _case);
+int print_hex(va_list arg);
+int print_HEX(va_list arg);
+int print_STR(va_list arg);
+char *convert(unsigned int num, int base);
 /**
- * typedef struct conversions_functions
- * @specifier: conversion specifier to use 
- * @function: pointer to function to do the printing
- *
+ * struct identifierStruct - structure definition of a printTypeStruct
+ * @indentifier: type
+ * @printer: function to print
  */
-typedef struct conversions_functions
+typedef struct identifierStruct
 {
-	char *specifier;
-	int (*function)(va_list);
-} conversions_functions;
+  char *indentifier;
+  int (*printer)(va_list);
+} identifierStruct;
 #endif
