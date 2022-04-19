@@ -2,15 +2,15 @@
 #include "main.h"
 
 /**
- * print_c_specifier - print argument with type that matches specifier
- * @elem: argument to print
+ * print_char - print argument with type that matches specifier
+ * @arg: argument to print
  *
  * Return:
  *	1 on success
  *	0 otherwise
  */
 
-int print_char(va_list elem)
+int print_char(va_list arg)
 {
-	return(_putchar(va_arg(elem, int)));
+	return (_putchar(va_arg(arg, int)));
 }
