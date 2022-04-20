@@ -17,12 +17,7 @@ int print_hex_base(va_list arg, char _case);
 int print_hex(va_list arg);
 int print_HEX(va_list arg);
 int print_STR(va_list arg);
-int print_int(va_list arg);
-int print_unsignedToBinary(va_list arg);
-void print_binary(unsigned int n, unsigned int *printed);
 char *convert(unsigned int num, int base);
-int print_plus(char);
-
 /**
  * struct identifierStruct - structure definition of a printTypeStruct
  * @indentifier: type
@@ -30,16 +25,8 @@ int print_plus(char);
  */
 typedef struct identifierStruct
 {
-	char *indentifier;
-	int (*printer)(va_list);
+  char *indentifier;
+  int (*printer)(va_list);
 } identifierStruct;
 
-/**
- * struct numberCheck - check for specifier
- * @specifier: specifier to use for checking
- */
-typedef struct numberCheck
-{
-	char *specifier;
-} numberCheck;
 #endif
