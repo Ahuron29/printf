@@ -9,14 +9,14 @@
 
 int print_hex_base(va_list arg, char _case)
 {
-unsigned int num = va_arg(arg, unsigned int);
-int nbrCharacters;
+  unsigned int num = va_arg(arg, unsigned int);
+  int nbrCharacters;
 
-if (num == 0)
-return (_putchar('0'));
-nbrCharacters = print_unsignedIntToHex(num, _case);
+  if (num == 0)
+    return (_putchar('0'));
+  nbrCharacters = print_unsignedIntToHex(num, _case);
 
-return (nbrCharacters);
+  return (nbrCharacters);
 }
 /**
  * print_hex - prints a hexadecimal in lower case
@@ -26,7 +26,7 @@ return (nbrCharacters);
 
 int print_hex(va_list arg)
 {
-return (print_hex_base(arg, 'a'));
+  return (print_hex_base(arg, 'a'));
 }
 
 /**
@@ -37,5 +37,5 @@ return (print_hex_base(arg, 'a'));
 
 int print_HEX(va_list arg)
 {
-return (print_hex_base(arg, 'A'));
+  return (print_hex_base(arg, 'A'));
 }

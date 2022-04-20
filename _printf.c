@@ -75,7 +75,6 @@ if (identifierPrinted == -1 || identifierPrinted != 0)
 i++;
 if (identifierPrinted > 0)
 charPrinted += identifierPrinted;
-
 if (identifierPrinted == 0)
 {
 _putchar('%');
