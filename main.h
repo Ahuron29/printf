@@ -30,12 +30,12 @@ int print_plus(char);
  */
 typedef struct identifierStruct
 {
-  char *indentifier;
-  int (*printer)(va_list);
+	char *indentifier;
+	int (*printer)(va_list);
 } identifierStruct;
 
 /**
- * struct numberCheck
+ * struct numberCheck - check for specifier
  * @specifier: specifier to use for checking
  */
 typedef struct numberCheck
